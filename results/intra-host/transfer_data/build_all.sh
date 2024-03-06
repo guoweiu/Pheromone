@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # Please modify it as required
 absolute_path="/home/lgw/Pheromone" # project path
@@ -8,4 +9,4 @@ rm -rf /tmp/shm/; mkdir /tmp/shm/;\
 cmake -DCMAKE_BUILD_TYPE=debug -S ${absolute_path} -B /tmp/SPheromone129;\
 cmake --build /tmp/SPheromone129 \
 --target manager coordinator scheduler executor \
-exp00_back exp00_front exp00_invoker exp00_register -- -j 16"
+exp01_backend exp01_frontend exp01_invoker exp01_register -- -j 16"

@@ -28,13 +28,15 @@ ref `benchmarks/01`
 ## Benchmarks
 
 <pre><code>
-benchmarks
-    |---00 # application: long function chain
-    |---01 # application: test transfer data
-    |---02 # real serverless application: media service 
-    |---03 # real serverless application: ml pipeline
-    |---05 # real serverless application: finra
-|---Lumine
+Pheromone
+|---benchmarks
+    |---00 # benchmark analysis: Function Chain
+    |---01 # data transfer latency: Transfer data
+    |---02 # benchmark analysis: Media Service
+    |---06 # benchmark analysis: FINRA
+|---results # scripts and config files
+    |---inter-host
+    |---intra-host
 </code></pre>
 
 

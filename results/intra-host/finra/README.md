@@ -1,6 +1,8 @@
 FINRA
 ---
 
+> If errors happen during building or evaluation, double-check IP addresses and source project paths in the scripts.
+
 ## Build
 
 ```shell
@@ -24,17 +26,23 @@ Linking CXX shared library /tmp/shm/exp06_run_audit.so
 Built target exp06_run_audit
 ```
 
-## How to measure latency?
+## Evaluation
 
+### How to measure latency?
+
+
+Measure the latency of FINRA with a fan-out degree set to 10.
+(If measuring latency under different fan-out degrees, 
+simply repeat the process with varying fan-out degree values.)
 ```shell
 
-# step 1
-bash ./start_all.sh
+# step 1, setup Pheromone along with FINRA application
+bash ./start_all.sh 10
 
-# step 2
-bash ./invoke_latency.sh
+# step 2, invoke with the argument set to 10.
+bash ./invoke_latency.sh 10
 
-# step 3
+# step 3, stop all processes
 bash ./stop_all.sh
 
 ```
@@ -48,40 +56,12 @@ req_id = 100000, token 16741 us.
 req_id = 100000, token 34239 us.
 ```
 
-## How to measure throughput?
-
-
-```shell
-
-# step 1
-bash ./start_all.sh
-
-# step 2
-bash ./invoke_throughput.sh
-
-# step 3
-bash ./stop_all.sh
-
-```
+### How to measure throughput?
 
 
 
 
-## How to measure resource consumption?
-
-```shell
-
-# step 1
-bash ./start_all.sh
-
-# step 2
-bash ./invoke_throuphput.sh
 
 
-top -bn 10 | grep -E 'PID'
+### How to measure resource consumption?
 
-
-# step 3
-bash ./stop_all.sh
-
-```
