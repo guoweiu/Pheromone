@@ -1,9 +1,9 @@
 #!/bin/bash
 
-config_file_129="/home/lgw/SPheromone/results/inter-host/function_chain/config129.yml"
-config_file_126="/home/lgw/SPheromone/results/inter-host/function_chain/config126.yml"
+config_file_129="/home/lgw/Pheromone/results/inter-host/function_chain/config129.yml"
+config_file_126="/home/lgw/Pheromone/results/inter-host/function_chain/config126.yml"
 
-finra_data_path="/home/lgw/SPheromone/benchmarks/06/data/"
+finra_data_path="/home/lgw/Pheromone/benchmarks/06/data/"
 
 rm_dir="rm -rf /tmp/sp01; mkdir /tmp/sp01"
 

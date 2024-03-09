@@ -3,7 +3,7 @@
 ip=`ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:" | grep "192.168.1.129"`
 
 build_dir="/tmp"
-config_file="/home/lgw/SPheromone/results/inter-host/transfer_data"
+config_file="/home/lgw/Pheromone/results/inter-host/transfer_data"
 
 if [[ $ip == "192.168.1.129" ]]
 then

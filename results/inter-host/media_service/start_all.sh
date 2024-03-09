@@ -1,8 +1,8 @@
 #!/bin/bash
 
-config_file_129="/home/lgw/SPheromone/results/inter-host/media_service/config129.yml"
-config_file_126="/home/lgw/SPheromone/results/inter-host/media_service/config126.yml"
-service_config_file="/home/lgw/SPheromone/benchmarks/02/config/service_config.json"
+config_file_129="/home/lgw/Pheromone/results/inter-host/media_service/config129.yml"
+config_file_126="/home/lgw/Pheromone/results/inter-host/media_service/config126.yml"
+service_config_file="/home/lgw/Pheromone/benchmarks/02/config/service_config.json"
 
 # precondition
 rm_dir="rm -rf /tmp/sp02; mkdir /tmp/sp02"

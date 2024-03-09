@@ -15,10 +15,10 @@ static ClientPool<MCClient> *g_mc_client_pool;
 
 auto status = init_review_storage(g_mongodb_client_pool, g_mc_client_pool);
 
-auto gateway_addr = utils::GetEnvVariable("LUMINE_GATEWAY_ADDR", "");
-auto gateway_port = utils::GetEnvVariable("LUMINE_GATEWAY_PORT", "");
+auto gateway_addr = utils::GetEnvVariable("LUMINE_GATEWAY_ADDR", "192.168.1.126");
+auto gateway_port = utils::GetEnvVariable("LUMINE_GATEWAY_PORT", "8084");
 
-auto request = utils::Socket(gateway_addr.c_str(), std::stoi(gateway_port));
+//auto request = utils::Socket("192.168.1.126", 8084);
 
 extern "C" {
 int handle(UserLibraryInterface *library, int arg_size, char **arg_values) {
@@ -56,16 +56,16 @@ int handle(UserLibraryInterface *library, int arg_size, char **arg_values) {
     auto handler = new ReviewStorageHandler(g_mc_client_pool, g_mongodb_client_pool);
     int ret = handler->StoreReview(*review);
 
-
-    if (!gateway_addr.empty() && !gateway_port.empty()) {
-        auto request_payload = std::to_string(j["req_id"].get<long>());
-
-        if (request.conn() < 0) {
-            perror("Failed to connect");
-            return -1;
-        }
-        request.issue_http_request("POST", "/function/exp09End", request_payload.c_str());
-    }
+//    std::cout << gateway_addr << std::endl;
+//    if (!gateway_addr.empty() && !gateway_port.empty()) {
+//        auto request_payload = std::to_string(j["req_id"].get<long>());
+//
+//        if (request.conn() < 0) {
+//            perror("Failed to connect");
+//            return -1;
+//        }
+//        request.issue_http_request("POST", "/function/exp09End", request_payload.c_str());
+//    }
 
     auto end_time = utils::get_timestamp_us();
     std::cout << "StoreReview4 finished!, token " << end_time - start_time << std::endl;

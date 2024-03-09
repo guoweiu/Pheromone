@@ -1,7 +1,7 @@
 #!/bin/bash
 
-config_file_129="/home/lgw/SPheromone/results/intra-host/media_service/config129.yml"
-service_config_file="/home/lgw/SPheromone/benchmarks/02/config/service_config.json"
+config_file_129="/home/lgw/Pheromone/results/intra-host/media_service/config129.yml"
+service_config_file="/home/lgw/Pheromone/benchmarks/02/config/service_config.json"
 
 # precondition
 rm_dir="rm -rf /tmp/sp02; mkdir /tmp/sp02"
@@ -17,8 +17,6 @@ thread_num=20
 # start executor
 ssh -p 22 lgw@192.168.1.129 "for ((i = 0; i < ${thread_num}; i++)); do export CONFIG_FILE=${config_file_129}; \
    export STORE_SERVICE_CONFIG_PATH=${service_config_file}; \
-   export LUMINE_GATEWAY_ADDR=192.168.1.129; \
-   export LUMINE_GATEWAY_PORT=8084; \
    /tmp/SPheromone129/executor/executor \$i 1>/tmp/sp02/executor_\${i}.log 2>&1 & done"
 
 manager_ip="192.168.1.129"
