@@ -46,12 +46,3 @@ transfer payload, size = 511, token 178
 ...
 ```
 
-### How to measure throughput?
-
-
-
-
-
-
-### How to measure resource consumption?
-

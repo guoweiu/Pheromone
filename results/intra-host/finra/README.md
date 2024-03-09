@@ -58,10 +58,5 @@ req_id = 100000, token 34239 us.
 
 ### How to measure throughput?
 
-
-
-
-
-
-### How to measure resource consumption?
+Please reference Function Chain.
 

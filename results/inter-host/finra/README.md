@@ -53,9 +53,4 @@ Note that, we deploy the application within a single node,
 eliminating errors caused by differences in system clocks across nodes.
 
 
-
-### How to measure throughput?
-
-
-
-### How to measure resource consumption?
+  
