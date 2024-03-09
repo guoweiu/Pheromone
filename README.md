@@ -17,15 +17,11 @@ sudo apt-get install -y libmongoc-dev libbson-dev libbson-1.0-0
 sudo apt install libboost-all-dev
 ```
 
-## Build
-
-set `Build Directory` ad `/tmp/SPheromone129`, and then build
-
-## Run
-
-ref `benchmarks/01`
-
 ## Benchmarks
+
+The `benchmarks` directory contains the source code for benchmarks, 
+while the `results` directory contains the scripts and configuration files for evaluation.
+
 
 <pre><code>
 Pheromone

@@ -1,9 +1,13 @@
 #!/bin/bash
 
-config_file_129="/home/lgw/SPheromone/results/inter-host/finra/config129.yml"
-config_file_126="/home/lgw/SPheromone/results/inter-host/finra/config126.yml"
 
-finra_data_path="/home/lgw/SPheromone/benchmarks/06/data/"
+absolute_path="/home/lgw/Pheromone" # project path
+
+#--------------------
+config_file_129=${absolute_path}"/results/inter-host/finra/config129.yml"
+config_file_126=${absolute_path}"/results/inter-host/finra/config126.yml"
+
+finra_data_path=${absolute_path}"/benchmarks/06/data/"
 
 rm_dir="rm -rf /tmp/sp06; mkdir /tmp/sp06"
 
